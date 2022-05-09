@@ -108,8 +108,8 @@ namespace CameraX
 
                 // Frame by frame analyze
                 var imageAnalyzer = new ImageAnalysis.Builder().Build();
-                imageAnalyzer.SetAnalyzer(cameraExecutor, new LuminosityAnalyzer(luma =>
-                    Log.Debug(TAG, $"Average luminosity: {luma}")
+                imageAnalyzer.SetAnalyzer(cameraExecutor, new TextAnalyzer(text =>
+                    Log.Debug(TAG, $"Text recognised: {text}")
                     ));
 
                 // Select back camera as a default, or front camera otherwise
